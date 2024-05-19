@@ -3,6 +3,10 @@
 1. **Clone the Repository**: Clone the backend repository to your local machine.
 
 git clone https://github.com/Abhinavnist/Qriocity-backend/
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8e5bff8990f62175ed9788dbc3126702460be8fa
 
 2. **Install Dependencies**: Navigate to the backend directory and install the required dependencies using npm or yarn.
 
