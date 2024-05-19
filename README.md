@@ -2,7 +2,7 @@
 
 1. **Clone the Repository**: Clone the backend repository to your local machine.
 
-git clone <backend-repo-url>
+git clone https://github.com/Abhinavnist/Qriocity-backend/
 
 2. **Install Dependencies**: Navigate to the backend directory and install the required dependencies using npm or yarn.
 
@@ -17,11 +17,3 @@ npm install
    npm start
 
 5. **Accessing API Endpoints**: Your backend server should now be running and accessible at the specified port (default is 5000). You can access the defined API endpoints by making HTTP requests to the appropriate routes.
-
-## Additional Information
-
-- **Database Configuration**: Update the database connection string in the `.env` file to connect to your preferred database (e.g., MongoDB, PostgreSQL).
-
-- **Authentication**: The backend includes authentication middleware (`authMiddleware.js`) and authentication routes (`authRoutes.js`). Customize these according to your authentication requirements.
-
-- **Route Handlers**: Define route handlers in the `controllers` directory to handle incoming requests and interact with the database.

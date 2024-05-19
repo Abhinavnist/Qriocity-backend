@@ -11,9 +11,7 @@ const getPost = async (req, res) => {
 
     const formattedPosts = posts.map((post) => ({
       ...post._doc,
-      createdAt: formatDate(post.createdAt),
-      authorName: post.author.name,
-      authorEmail: post.author.email,
+      date: formatDate(post.createdAt),
     }))
 
     res.json(formattedPosts)
@@ -25,13 +23,11 @@ const getPost = async (req, res) => {
 
 const formatDate = (date) => {
   const options = {
-    weekday: "long",
     year: "numeric",
     month: "long",
     day: "numeric",
     hour: "numeric",
     minute: "numeric",
-    second: "numeric",
   }
   return new Date(date).toLocaleDateString(undefined, options)
 }
@@ -40,7 +36,7 @@ const formatDate = (date) => {
 const createPost = async (req, res) => {
   try {
     const { title, content } = req.body
-    const image = req.file ? req.file.buffer : null
+    const image = req.file ? req.file.path : null
 
     const newPost = new Post({
       title,
